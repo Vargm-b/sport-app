@@ -1,0 +1,13 @@
+{
+  "name": "sport-items",
+  "version": "1.0.0",
+  "main": "backend/index.js",
+  "scripts": {
+    "start": "node backend/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.x.x",
+    "express": "^4.x.x",
+    "pg": "^8.x.x"
+  }
+}

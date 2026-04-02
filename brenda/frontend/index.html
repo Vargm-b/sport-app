@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Items</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <header class="hero">
+      <h1>Registro de Deportes</h1>
+    </header>
+
+    <section class="panel" id="panel-base">
+      <h2>1. Registrar elemento base</h2>
+      <p>Identifique su deporte base primero y registre para habilitar el resto de las funciones</p>
+      <form id="formBase" class="formulario" autocomplete="off">
+        <div class="campo">
+          <label for="baseItem">Deporte</label>
+          <input type="text" id="baseItem" placeholder="Atletismo" required>
+        </div>
+        <div class="campo">
+          <label for="baseValor">Valor</label>
+          <input type="number" id="baseValor" placeholder="120" required>
+        </div>
+        
+        <button type="submit" id="btnRegistrarBase">Registrar deporte base</button>
+      </form>
+      <p id="mensajeBase" class="mensaje"></p>
+    </section>
+
+    <section class="panel" id="panel-registro">
+      <h2>2. Registrar deporte</h2>
+      <p>Ingrese el deporte, su posición y su valor correspondiente.</p>
+      <form id="formRegistro" class="formulario" autocomplete="off">
+        <div class="campo">
+          <label for="item">Deporte</label>
+          <input type="text" id="item" placeholder="Ingrese el nombre del deporte" required>
+        </div>
+        <div class="campo">
+          <label for="pos">Posición</label>
+          <input type="number" id="pos" placeholder="Ingrese la posición ubicada del deporte" required>
+        </div>
+        <div class="campo">
+          <label for="valor">Valor</label>
+          <input type="number" id="valor" placeholder="Ingrese el valor correspondiente" required>
+        </div>
+        <button type="submit" id="btnRegistrar">Registrar deporte</button>
+      </form>
+      <p id="mensajeRegistro" class="mensaje"></p>
+    </section>
+
+    <section class="panel" id="panel-verificar">
+      <h2>3. Verificar existencia</h2>
+      <p>Compruebe si un deporte ya fue registrado.</p>
+      <form id="formVerificar" class="formulario">
+        <div class="campo">
+          <label for="buscarItem">Item</label>
+          <input type="text" id="buscarItem" placeholder="Ingrese el nombre del deporte" required>
+        </div>
+        <button type="submit" id="btnVerificar">Verificar</button>
+      </form>
+      <p id="resultadoVerificacion" class="mensaje"></p>
+    </section>
+
+    <section class="panel" id="panel-lista">
+      <h2>4. Mostrar lista registrada</h2>
+      <p>La lista se mostrará ordenada por posición.</p>
+      <button type="button" id="btnMostrarLista">Mostrar lista</button>
+      <div class="tabla-wrapper" id="contenedorTabla">
+        <table>
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Posición</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody id="tablaDeportes"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
