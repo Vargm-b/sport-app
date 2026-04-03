@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node valentina/backend/index.js",
     "backend": "node valentina/backend/index.js",
-    "frontend": "node frontend-server.js",
+    "frontend": "node valentina/frontend/server.js",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "dependencies": {

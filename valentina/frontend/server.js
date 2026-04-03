@@ -11,7 +11,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(express.static(path.join(__dirname, 'valentina/frontend')));
+app.use(express.static(__dirname));
 
 app.listen(8080, () => {
     console.log('Frontend servidor en http://localhost:8080');
