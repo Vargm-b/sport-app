@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap');
+
+:root {
+    --color-fondo: #0f0f0f;
+    --color-superficie: #181818;
+    --color-borde: #2a2a2a;
+    --color-acento: #c8f04a;
+    --color-acento-suave: rgba(200, 240, 74, 0.08);
+    --color-texto: #f0f0f0;
+    --color-texto-suave: #888;
+    --color-error: #ff6b6b;
+    --color-error-suave: rgba(255, 107, 107, 0.08);
+    --color-exito: #6bffb8;
+    --color-exito-suave: rgba(107, 255, 184, 0.08);
+    --radio: 12px;
+    --radio-pequeño: 6px;
+    --fuente-display: 'Syne', sans-serif;
+    --fuente-mono: 'DM Mono', monospace;
+    --fuente-cuerpo: 'DM Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+.encabezado {
+    border-bottom: 1px solid var(--color-borde);
+    padding: 1.5rem 2rem;
+    position: sticky;
+    top: 0;
+    background-color: rgba(15, 15, 15, 0.92);
+    backdrop-filter: blur(8px);
+    z-index: 10;
+}
+
+.encabezado-contenido {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.encabezado-icono {
+    font-size: 1.4rem;
+    color: var(--color-acento);
+    line-height: 1;
+}
+
+.encabezado-titulo {
+    font-family: var(--fuente-display);
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-texto);
+}
+
+.principal {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tarjeta {
+    background-color: var(--color-superficie);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.2s;
+}
+
+.tarjeta-etiqueta {
+    font-family: var(--fuente-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--color-acento);
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5rem;
+}
+
+.tarjeta-titulo {
+    font-family: var(--fuente-display);
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-texto);
+    margin-bottom: 0.35rem;
+}
+
+.tarjeta-descripcion {
+    font-size: 0.875rem;
+    color: var(--color-texto-suave);
+    margin-bottom: 1.5rem;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formulario-inline {
+    flex-direction: column;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.campo-flex {
+    flex: 1;
+}
+
+.campo-etiqueta {
+    font-family: var(--fuente-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-texto-suave);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.campo-input {
+    background-color: var(--color-fondo);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio-pequeño);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+    width: 100%;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.campo-input::placeholder {
+    color: #444;
+}
+
+.campo-input:focus {
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 3px var(--color-acento-suave);
+}
+
+.campo-input[type="number"]::-webkit-inner-spin-button,
+.campo-input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.boton {
+    border: none;
+    border-radius: var(--radio-pequeño);
+    cursor: pointer;
+    font-family: var(--fuente-mono);
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    padding: 0.65rem 1.4rem;
+    transition: background-color 0.15s, transform 0.1s, opacity 0.15s;
+    white-space: nowrap;
+}
+
+.boton:active {
+    transform: scale(0.97);
+}
+
+.boton-primario {
+    background-color: var(--color-acento);
+    color: #0f0f0f;
+    align-self: flex-start;
+}
+
+.boton-primario:hover {
+    background-color: #d4f55e;
+}
+
+.boton-secundario {
+    background-color: transparent;
+    border: 1px solid var(--color-borde);
+    color: var(--color-texto);
+}
+
+.boton-secundario:hover {
+    border-color: var(--color-acento);
+    color: var(--color-acento);
+}
+
+.boton:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.mensaje {
+    border-radius: var(--radio-pequeño);
+    font-family: var(--fuente-mono);
+    font-size: 0.82rem;
+    margin-top: 1rem;
+    padding: 0.65rem 0.9rem;
+    line-height: 1.5;
+}
+
+.mensaje.exito {
+    background-color: var(--color-exito-suave);
+    border: 1px solid rgba(107, 255, 184, 0.2);
+    color: var(--color-exito);
+}
+
+.mensaje.error {
+    background-color: var(--color-error-suave);
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    color: var(--color-error);
+}
+
+.oculto {
+    display: none;
+}
+
+.lista-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.lista-header .tarjeta-titulo {
+    margin-bottom: 0.35rem;
+}
+
+.lista-header .tarjeta-descripcion {
+    margin-bottom: 0;
+}
+
+.tabla {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+.tabla-th {
+    font-family: var(--fuente-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-texto-suave);
+    padding: 0.5rem 0.75rem;
+    border-bottom: 1px solid var(--color-borde);
+    text-align: left;
+}
+
+.tabla-derecha {
+    text-align: right;
+}
+
+.tabla-fila {
+    border-bottom: 1px solid var(--color-borde);
+    transition: background-color 0.15s;
+}
+
+.tabla-fila:last-child {
+    border-bottom: none;
+}
+
+.tabla-fila:hover {
+    background-color: var(--color-acento-suave);
+}
+
+.tabla-fila td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.tabla-pos {
+    font-family: var(--fuente-mono);
+    font-size: 0.75rem;
+    color: var(--color-acento);
+    font-weight: 500;
+    width: 3rem;
+}
+
+.tabla-nombre {
+    font-weight: 500;
+    color: var(--color-texto);
+}
+
+.tabla-costo {
+    text-align: right;
+    font-family: var(--fuente-mono);
+    font-size: 0.85rem;
+    color: var(--color-texto-suave);
+}

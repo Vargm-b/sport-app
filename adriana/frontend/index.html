@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deportes</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="encabezado">
+        <div class="encabezado-contenido">
+            <span class="encabezado-icono">✧</span>
+            <h1 class="encabezado-titulo">Registro de Deportes</h1>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="tarjeta" id="seccion-registrar">
+            <div class="tarjeta-etiqueta">01</div>
+            <h2 class="tarjeta-titulo">Registrar deporte</h2>
+            <p class="tarjeta-descripcion">
+                Ingresa el nombre y el costo del deporte que deseas registrar. El costo debe ser un número positivo
+            </p>
+
+            <div class="formulario">
+                <div class="campo">
+                    <label class="campo-etiqueta" for="inputNombre">Nombre</label>
+                    <input class="campo-input" id="inputNombre" type="text" placeholder="Ej: Natación"
+                        autocomplete="off" />
+                </div>
+                <div class="campo">
+                    <label class="campo-etiqueta" for="inputCosto">Costo</label>
+                    <input class="campo-input" id="inputCosto" type="number" placeholder="Ej: 10" min="0" />
+                </div>
+                <button class="boton boton-primario" id="btnRegistrar">
+                    Registrar
+                </button>
+            </div>
+
+            <div class="mensaje oculto" id="mensajeRegistrar"></div>
+        </section>
+
+        <section class="tarjeta tarjeta-lista" id="seccion-lista">
+            <div class="tarjeta-etiqueta">02</div>
+            <div class="lista-header">
+                <div>
+                    <h2 class="tarjeta-titulo">Lista de Deportes</h2>
+                    <p class="tarjeta-descripcion">Registro</p>
+                </div>
+                <button class="boton boton-secundario" id="btnLista">
+                    Cargar lista
+                </button>
+            </div>
+
+            <div id="contenedorLista" class="oculto">
+                <table class="tabla">
+                    <thead>
+                        <tr>
+                            <th class="tabla-th">#</th>
+                            <th class="tabla-th">Deporte</th>
+                            <th class="tabla-th tabla-derecha">Costo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpoTabla"></tbody>
+                </table>
+            </div>
+
+            <div class="mensaje oculto" id="mensajeLista"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
