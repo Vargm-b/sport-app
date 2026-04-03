@@ -1,13 +1,20 @@
 {
   "name": "sport-items",
   "version": "1.0.0",
-  "main": "backend/index.js",
+  "main": "valentina/backend/index.js",
   "scripts": {
-    "start": "node backend/index.js"
+    "start": "node valentina/backend/index.js",
+    "backend": "node valentina/backend/index.js",
+    "frontend": "node frontend-server.js",
+    "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "dependencies": {
-    "dotenv": "^16.x.x",
-    "express": "^4.x.x",
-    "pg": "^8.x.x"
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
   }
 }

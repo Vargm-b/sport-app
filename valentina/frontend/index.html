@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Deportes - Valentina</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="contenedor">
+    <h2>Registrar Ítem (Deporte)</h2>
+    
+    <form id="formularioDeportes">
+        <label>Ítem (Nombre del deporte):</label>
+        <input type="text" id="nombre" placeholder="Ej: Natación" required>
+
+        <label>Posición:</label>
+        <input type="number" id="orden" placeholder="Ej: 7" required>
+
+        <label>Valor:</label>
+        <input type="number" id="valor" placeholder="Ej: 20" required>
+
+        <button type="submit">Registrar Deporte</button>
+    </form>
+
+    <h2>Deportes Registrados</h2>
+    <table id="tablaDeportes">
+        <thead>
+            <tr>
+                <th>Posición</th>
+                <th>Ítem</th>
+                <th>Valor</th>
+            </tr>
+        </thead>
+        <tbody>
+            </tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
