@@ -1,16 +1,10 @@
-import express from 'express';
-import pg from 'pg';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const express = require('express');
+const { Pool } = require('pg');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const path = require('path');
 
 dotenv.config({ path: path.join(__dirname, '../../.env') });
-
-const { Pool } = pg;
 const app = express();
 const port = process.env.PORT || 3000;
 
