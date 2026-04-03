@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de deportes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h2>Registro de deportes</h2>
+
+    <form id="formulario" class="card">
+      <label>nombre del deporte:</label>
+      <input type="text" id="nombre" required>
+
+      <label>orden:</label>
+      <input type="number" id="orden" required>
+
+      <label>valor:</label>
+      <input type="number" id="valor" required>
+
+      <button type="submit">REGISTRAR</button>
+    </form>
+
+    <p id="mensaje" class="mensaje"></p>
+
+    <h3>Deportes registrados</h3>
+    <table id="tabla">
+      <thead>
+        <tr><th>Nombre</th><th>Orden</th><th>Valor</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
